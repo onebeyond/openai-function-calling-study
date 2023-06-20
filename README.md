@@ -7,10 +7,11 @@ pip install requests pandas tenacity termcolor
 ```
 
 ## How to run
+You will need to provide OpenAI API key either in `OPENAI_API_KEY` environment variable or when asked by the program.
 Python 3.9+ is required.
 
 ```bash
-python chatfn.py
+OPENAI_API_KEY=sk-*** python chatfn.py
 ```
 
 ## How to use
