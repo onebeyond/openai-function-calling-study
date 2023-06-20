@@ -316,7 +316,7 @@ fn_map = {
 
 messages = []
 messages.append({"role": "system", "content": r"""Don't make assumptions about what values to plug into functions, before invoking a function, ask the user to confirm the values for parameters
-                Do call python directly. Always start conversation with invoking functions.get_user_information to get the user's name and location.
+                Always start conversation with invoking functions.get_user_information to get the user's name and location.
                  """ 
                  + f"\nToday is {datetime.datetime.now().strftime('%Y-%m-%d')}"
                  })
