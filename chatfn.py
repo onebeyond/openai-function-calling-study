@@ -299,6 +299,7 @@ def send_email(args):
 
 def python(args):
     print(args)
+    logging.error("GPT hallucinated python code.")
     return ""
 
 fn_map = {
@@ -343,7 +344,6 @@ while True:
             function_name, function_arguments = function_call["name"], function_call["arguments"]
             if function_name == "python":
                 print(response_message)
-                # exit("python function is not supported")
             function_to_call = fn_map[function_name]
             fn_result = function_to_call(function_arguments)
             fn_response_message = { "role": "function", "name": function_name, "content": fn_result,  }
